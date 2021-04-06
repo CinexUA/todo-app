@@ -66,8 +66,7 @@ export const mutations = {
     },
     [REMOVE_TODO] (state, index)
     {
-        const idx = state.todos.indexOf(index)
-        state.todos.splice(idx, 1)
+        state.todos = state.todos.filter(t => t.index !== index)
         storeToDB(state.todos)
     },
     [EARS_TODOS] (state)
