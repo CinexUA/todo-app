@@ -4,7 +4,7 @@
     <create-todo />
 
     <div>
-       <a @click.prevent="sortByEvenOdd()" href="#">sort by</a> <p>{{sort}}</p>
+       <a class="sort" @click.prevent="sortByEvenOdd()" href="#">sort by</a> <p class="sort">{{sort}}</p>
     </div>
 
     <todo-list :todos="todos" :key="todos.length" />
@@ -74,5 +74,8 @@ export default {
   .logo{
     max-width: 120px;
     max-height: 120px;
+  }
+  .sort{
+    color: #18970e;
   }
 </style>

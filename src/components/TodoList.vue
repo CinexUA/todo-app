@@ -4,6 +4,10 @@
             <todo-item v-for="todo in todos" :key="todo.index" :todo="todo" />
         </div>
 
+        <div v-else>
+            no entries
+        </div>
+
         <div class="ears-wrapper">
             <a @click.prevent="earsTodos()" href="#">Ears</a>
         </div>
