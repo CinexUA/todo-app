@@ -40,6 +40,7 @@
                 if(this.validatedForm()){
                     this.$store.dispatch('todos/addTodo', this.todo)
                     this.$root.$emit('reloadTodos')
+                    this.todo = ''
                 }
             }
         }
